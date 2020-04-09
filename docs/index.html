@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: bamazon</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">bamazon</h1>
+
+    
+
+
+
+    
+
+
+    <h3> </h3>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article><h1>bamazon</h1>
+<p>Homework 10</p>
+<h3>Overview</h3>
+<p>This is an execution of the Shopping Cart function using Command Line Interface (CLI) only and an interface to MySQL.  The project has afforded this programmer the opportunity to develop skills using the follwing NPM packages: <a href="https://www.npmjs.com/package/table">Table</a>, <a href="https://www.npmjs.com/package/inquirer">Inquirer</a>, <a href="https://www.npmjs.com/package/mysql">MySQL</a> and <a href="https://www.npmjs.com/package/jsdoc">JSDoc</a>.</p>
+<h3>User Documentation</h3>
+<p>First, watch this video: <em><em><a href="https://drive.google.com/file/d/14n_v6nVk4phDeK0Vzy6z3lEmtbhKBdk6/view">bamazonCustomer</a></em></em></p>
+<h4>bamazon Customer module User Documentation</h4>
+<p>From the console terminal prompt:</p>
+<ol>
+<li>Enter <code>node bamazonCustomer</code></li>
+<li>Will display contents of inventory.</li>
+<li>User will be prompted <code>What SKU do you want to purchase?</code></li>
+<li>Enter the SKU# press <code>enter</code> key</li>
+<li>User will be prompted <code>How many items do you want to purchase?</code></li>
+<li>See clips below for examples.</li>
+</ol>
+<p>Enter <code>node bamazonCustomer</code> get prompted for input</p>
+<pre class="prettyprint source"><code>╔═════╤════════════════╤═══════╤═════════╗
+║ SKU │ Description    │ Price │ On Hand ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 1   │ Hamburger      │ 100   │ 74      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 2   │ TV             │ 99    │ 99      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 3   │ Shirt          │ 98    │ 96      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 4   │ Hammer         │ 97    │ 87      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 5   │ Saw            │ 96    │ 96      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 6   │ Shoes          │ 95    │ 95      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 7   │ Laptop         │ 94    │ 84      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 8   │ Microwave      │ 93    │ 51      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 9   │ Food Processor │ 92    │ 74      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 10  │ Toilet Paper   │ 91    │ 24      ║
+╚═════╧════════════════╧═══════╧═════════╝
+
+? What SKU do you want to purchase?  2     
+? How many items do you want to purchase?  1
+order placed for 1 TV
+&lt;ctrl>C to break out of input mode
+Removed 1 items of SKU# 2 inventory
+╔═════╤════════════════╤═══════╤═════════╗
+║ SKU │ Description    │ Price │ On Hand ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 1   │ Hamburger      │ 100   │ 74      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 2   │ TV             │ 99    │ 98      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 3   │ Shirt          │ 98    │ 96      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 4   │ Hammer         │ 97    │ 87      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 5   │ Saw            │ 96    │ 96      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 6   │ Shoes          │ 95    │ 95      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 7   │ Laptop         │ 94    │ 84      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 8   │ Microwave      │ 93    │ 51      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 9   │ Food Processor │ 92    │ 74      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 10  │ Toilet Paper   │ 91    │ 24      ║
+╚═════╧════════════════╧═══════╧═════════╝
+
+? What SKU do you want to purchase?  5
+? How many items do you want to purchase?  97
+Insufficient quantity of SKU# 5 to meet order of 97
+&lt;ctrl>C to break out of input mode
+╔═════╤════════════════╤═══════╤═════════╗
+║ SKU │ Description    │ Price │ On Hand ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 1   │ Hamburger      │ 100   │ 74      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 2   │ TV             │ 99    │ 98      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 3   │ Shirt          │ 98    │ 96      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 4   │ Hammer         │ 97    │ 87      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 5   │ Saw            │ 96    │ 96      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 6   │ Shoes          │ 95    │ 95      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 7   │ Laptop         │ 94    │ 84      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 8   │ Microwave      │ 93    │ 51      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 9   │ Food Processor │ 92    │ 74      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 10  │ Toilet Paper   │ 91    │ 24      ║
+╚═════╧════════════════╧═══════╧═════════╝
+
+? What SKU do you want to purchase?  5
+? How many items do you want to purchase?  90
+order placed for 90 Saws
+&lt;ctrl>C to break out of input mode
+Removed 90 items of SKU# 5 inventory
+╔═════╤════════════════╤═══════╤═════════╗
+║ SKU │ Description    │ Price │ On Hand ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 1   │ Hamburger      │ 100   │ 74      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 2   │ TV             │ 99    │ 98      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 3   │ Shirt          │ 98    │ 96      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 4   │ Hammer         │ 97    │ 87      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 5   │ Saw            │ 96    │ 6       ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 6   │ Shoes          │ 95    │ 95      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 7   │ Laptop         │ 94    │ 84      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 8   │ Microwave      │ 93    │ 51      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 9   │ Food Processor │ 92    │ 74      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 10  │ Toilet Paper   │ 91    │ 24      ║
+╚═════╧════════════════╧═══════╧═════════╝
+</code></pre>
+<h3>Program Documentation</h3>
+<p>Main code references for <code>bamazon</code> can be accessed <a href="https://stevenbowler.github.io/bamazon/docs/index.html">here</a>.  Global scope variables can be accessed <a href="https://stevenbowler.github.io/bamazon/docs/global.html">here</a>,</p></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">bamazon</a></h2><h3>Global</h3><ul><li><a href="global.html#firstDisplay">firstDisplay</a></li><li><a href="global.html#genericMySQL">genericMySQL</a></li><li><a href="global.html#getCharInput">getCharInput</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Thu Apr 09 2020 17:34:35 GMT-0500 (Central Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

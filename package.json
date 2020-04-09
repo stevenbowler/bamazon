@@ -1,0 +1,25 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "MySQL development",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "doc": "jsdoc -c jsdoc.json -R README.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevenbowler/bamazon.git"
+  },
+  "author": "Steven Bowler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stevenbowler/bamazon/issues"
+  },
+  "homepage": "https://github.com/stevenbowler/bamazon#readme",
+  "dependencies": {
+    "inquirer": "^7.1.0",
+    "jsdoc": "^3.6.4",
+    "mysql": "^2.18.1",
+    "table": "^5.4.6"
+  }
+}
