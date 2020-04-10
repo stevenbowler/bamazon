@@ -48,8 +48,10 @@
 <h3>Overview</h3>
 <p>This is an execution of the Shopping Cart function using Command Line Interface (CLI) only and an interface to MySQL.  The project has afforded this programmer the opportunity to develop skills using the follwing NPM packages: <a href="https://www.npmjs.com/package/table">Table</a>, <a href="https://www.npmjs.com/package/inquirer">Inquirer</a>, <a href="https://www.npmjs.com/package/mysql">MySQL</a> and <a href="https://www.npmjs.com/package/jsdoc">JSDoc</a>.</p>
 <h3>User Documentation</h3>
-<p>First, watch this video: <em><em><a href="https://drive.google.com/file/d/14n_v6nVk4phDeK0Vzy6z3lEmtbhKBdk6/view">bamazonCustomer</a></em></em></p>
-<h4>bamazon Customer module User Documentation</h4>
+<p>First, to interact with the bamazon database as a customer, watch this video: <em><em><a href="https://drive.google.com/file/d/14n_v6nVk4phDeK0Vzy6z3lEmtbhKBdk6/view">bamazonCustomer</a></em></em> or read the section below titled <code>bamazonCustomer module User Documentation</code>.</p>
+<p>Next, to interact with the bamazon database as a manager, watch this video: <em><em><a href="https://drive.google.com/file/d/1REl8AMISx-nLwIWfQWmK-4_ixC6zLrh4/view">bamazonManager</a></em></em> or read the section below titled <code>bamazonManager module User Documentation</code>.</p>
+<p>Finally, to interact with the bamazaon database as a supervisor, watch this video: <em><em><a href="https://drive.google.com/file/d/14n_v6nVk4phDeK0Vzy6z3lEmtbhKBdk6/view">bamazonSupervisor</a></em></em> or read the section below titled <code>bamazonSupervisor module User Documentation</code>.</p>
+<h4>bamazonCustomer module User Documentation</h4>
 <p>From the console terminal prompt:</p>
 <ol>
 <li>Enter <code>node bamazonCustomer</code></li>
@@ -66,18 +68,6 @@
 ║ 1   │ Hamburger      │ 100   │ 74      ║
 ╟─────┼────────────────┼───────┼─────────╢
 ║ 2   │ TV             │ 99    │ 99      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 3   │ Shirt          │ 98    │ 96      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 4   │ Hammer         │ 97    │ 87      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 5   │ Saw            │ 96    │ 96      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 6   │ Shoes          │ 95    │ 95      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 7   │ Laptop         │ 94    │ 84      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 8   │ Microwave      │ 93    │ 51      ║
 ╟─────┼────────────────┼───────┼─────────╢
 ║ 9   │ Food Processor │ 92    │ 74      ║
 ╟─────┼────────────────┼───────┼─────────╢
@@ -96,18 +86,6 @@ Removed 1 items of SKU# 2 inventory
 ╟─────┼────────────────┼───────┼─────────╢
 ║ 2   │ TV             │ 99    │ 98      ║
 ╟─────┼────────────────┼───────┼─────────╢
-║ 3   │ Shirt          │ 98    │ 96      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 4   │ Hammer         │ 97    │ 87      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 5   │ Saw            │ 96    │ 96      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 6   │ Shoes          │ 95    │ 95      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 7   │ Laptop         │ 94    │ 84      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 8   │ Microwave      │ 93    │ 51      ║
-╟─────┼────────────────┼───────┼─────────╢
 ║ 9   │ Food Processor │ 92    │ 74      ║
 ╟─────┼────────────────┼───────┼─────────╢
 ║ 10  │ Toilet Paper   │ 91    │ 24      ║
@@ -123,18 +101,6 @@ Insufficient quantity of SKU# 5 to meet order of 97
 ║ 1   │ Hamburger      │ 100   │ 74      ║
 ╟─────┼────────────────┼───────┼─────────╢
 ║ 2   │ TV             │ 99    │ 98      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 3   │ Shirt          │ 98    │ 96      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 4   │ Hammer         │ 97    │ 87      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 5   │ Saw            │ 96    │ 96      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 6   │ Shoes          │ 95    │ 95      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 7   │ Laptop         │ 94    │ 84      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 8   │ Microwave      │ 93    │ 51      ║
 ╟─────┼────────────────┼───────┼─────────╢
 ║ 9   │ Food Processor │ 92    │ 74      ║
 ╟─────┼────────────────┼───────┼─────────╢
@@ -153,22 +119,111 @@ Removed 90 items of SKU# 5 inventory
 ╟─────┼────────────────┼───────┼─────────╢
 ║ 2   │ TV             │ 99    │ 98      ║
 ╟─────┼────────────────┼───────┼─────────╢
-║ 3   │ Shirt          │ 98    │ 96      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 4   │ Hammer         │ 97    │ 87      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 5   │ Saw            │ 96    │ 6       ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 6   │ Shoes          │ 95    │ 95      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 7   │ Laptop         │ 94    │ 84      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 8   │ Microwave      │ 93    │ 51      ║
-╟─────┼────────────────┼───────┼─────────╢
 ║ 9   │ Food Processor │ 92    │ 74      ║
 ╟─────┼────────────────┼───────┼─────────╢
 ║ 10  │ Toilet Paper   │ 91    │ 24      ║
 ╚═════╧════════════════╧═══════╧═════════╝
+</code></pre>
+<h4>bamazonManager module User Documentation</h4>
+<p>From the console terminal prompt:</p>
+<ol>
+<li>Enter <code>node bamazonManager</code></li>
+<li>Will display contents of inventory.</li>
+<li>Select one of 5 option shown: <code>View Products for Sale, View Low Inventory, Update Stock Quantity, Add SKU, EXIT</code></li>
+<li>Follow the prompts and provide input as requested.</li>
+<li>See clips below for examples.</li>
+</ol>
+<p>Enter <code>node bamazonManager</code></p>
+<pre class="prettyprint source"><code>? Which would you like to do choose? 
+> View Products for Sale 
+  View Low Inventory 
+  Update Stock Quantity 
+  Add SKU 
+  EXIT 
+</code></pre>
+<p>Follow the prompts</p>
+<pre class="prettyprint source"><code>
+? Which would you like to do choose? View Products for Sale
+╔═════╤════════════════╤═══════╤═════════╗
+║ SKU │ Description    │ Price │ On Hand ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 1   │ Hamburger      │ 100   │ 74      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 2   │ TV             │ 99    │ 98      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 10  │ Toilet Paper   │ 91    │ 22      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 13  │ tester3        │ 234   │ 6       ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 14  │ tester4        │ 23    │ 4       ║
+╚═════╧════════════════╧═══════╧═════════╝
+
+? Which would you like to do choose? View Low Inventory
+╔═════╤═════════════╤═══════╤═════════╗
+║ SKU │ Description │ Price │ On Hand ║
+╟─────┼─────────────┼───────┼─────────╢
+║ 14  │ tester4     │ 23    │ 4       ║
+╚═════╧═════════════╧═══════╧═════════╝
+
+? Which would you like to do choose? Update Stock Quantity
+addInventory
+? Enter SKU/item_id to be modified:  14
+? Enter updated stock quantity:  6
+Updated stock_quantity for inventory item_id: 1
+╔═════╤════════════════╤═══════╤═════════╗
+║ SKU │ Description    │ Price │ On Hand ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 1   │ Hamburger      │ 100   │ 74      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 2   │ TV             │ 99    │ 98      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 10  │ Toilet Paper   │ 91    │ 22      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 13  │ tester3        │ 234   │ 6       ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 14  │ tester4        │ 23    │ 6       ║
+╚═════╧════════════════╧═══════╧═════════╝
+
+? Which would you like to do choose? View Low Inventory
+╔═════╤═════════════╤═══════╤═════════╗
+║ SKU │ Description │ Price │ On Hand ║
+╚═════╧═════════════╧═══════╧═════════╝
+
+? Which would you like to do choose? Add SKU
+addSKU
+? Enter product name of item:  tester5
+? Enter department name of item:  tester5
+? Enter price of item:  34
+? Enter starting stock quantity of item:  4
+Added to inventory item_id: 15
+╔═════╤════════════════╤═══════╤═════════╗
+║ SKU │ Description    │ Price │ On Hand ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 1   │ Hamburger      │ 100   │ 74      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 2   │ TV             │ 99    │ 98      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 10  │ Toilet Paper   │ 91    │ 22      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 13  │ tester3        │ 234   │ 6       ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 14  │ tester4        │ 23    │ 6       ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 15  │ tester5        │ 34    │ 4       ║
+╚═════╧════════════════╧═══════╧═════════╝
+
+? Which would you like to do choose? View Low Inventory
+╔═════╤═════════════╤═══════╤═════════╗
+║ SKU │ Description │ Price │ On Hand ║
+╟─────┼─────────────┼───────┼─────────╢
+║ 15  │ tester5     │ 34    │ 4       ║
+╚═════╧═════════════╧═══════╧═════════╝
+
+? Which would you like to do choose? EXIT
+
+sb@DESKTOP-P48C40B MINGW64 ~/OneDrive/Documents/BowlerConsulting/UTbootcamp/homework/bamazon (master)
+$ 
+
 </code></pre>
 <h3>Program Documentation</h3>
 <p>Main code references for <code>bamazon</code> can be accessed <a href="https://stevenbowler.github.io/bamazon/docs/index.html">here</a>.  Global scope variables can be accessed <a href="https://stevenbowler.github.io/bamazon/docs/global.html">here</a>,</p></article>
@@ -182,13 +237,13 @@ Removed 90 items of SKU# 5 inventory
 </div>
 
 <nav>
-    <h2><a href="index.html">bamazon</a></h2><h3>Global</h3><ul><li><a href="global.html#firstDisplay">firstDisplay</a></li><li><a href="global.html#genericMySQL">genericMySQL</a></li><li><a href="global.html#getCharInput">getCharInput</a></li></ul>
+    <h2><a href="index.html">bamazon</a></h2><h3>Namespaces</h3><ul><li><a href="bamazon.bamazonCustomer.html">bamazonCustomer</a></li><li><a href="bamazon.bamazonManager.html">bamazonManager</a></li></ul><h3>Global</h3><ul><li><a href="global.html#addInventory">addInventory</a></li><li><a href="global.html#addSKU">addSKU</a></li><li><a href="global.html#firstDisplay">firstDisplay</a></li><li><a href="global.html#genericMySQL">genericMySQL</a></li><li><a href="global.html#getCharInput">getCharInput</a></li><li><a href="global.html#lowInventory">lowInventory</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Thu Apr 09 2020 17:34:35 GMT-0500 (Central Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Fri Apr 10 2020 12:02:15 GMT-0500 (Central Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>

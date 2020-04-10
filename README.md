@@ -7,9 +7,14 @@ This is an execution of the Shopping Cart function using Command Line Interface 
 
 
 ### User Documentation
-First, watch this video: _*[bamazonCustomer](https://drive.google.com/file/d/14n_v6nVk4phDeK0Vzy6z3lEmtbhKBdk6/view)*_
+First, to interact with the bamazon database as a customer, watch this video: _*[bamazonCustomer](https://drive.google.com/file/d/14n_v6nVk4phDeK0Vzy6z3lEmtbhKBdk6/view)*_ or read the section below titled `bamazonCustomer module User Documentation`.
 
-#### bamazon Customer module User Documentation
+Next, to interact with the bamazon database as a manager, watch this video: _*[bamazonManager](https://drive.google.com/file/d/1REl8AMISx-nLwIWfQWmK-4_ixC6zLrh4/view)*_ or read the section below titled `bamazonManager module User Documentation`.
+
+Finally, to interact with the bamazaon database as a supervisor, watch this video: _*[bamazonSupervisor](https://drive.google.com/file/d/14n_v6nVk4phDeK0Vzy6z3lEmtbhKBdk6/view)*_ or read the section below titled `bamazonSupervisor module User Documentation`.
+
+
+#### bamazonCustomer module User Documentation
 From the console terminal prompt:
 1. Enter `node bamazonCustomer`
 2. Will display contents of inventory.
@@ -26,18 +31,6 @@ Enter `node bamazonCustomer` get prompted for input
 ║ 1   │ Hamburger      │ 100   │ 74      ║
 ╟─────┼────────────────┼───────┼─────────╢
 ║ 2   │ TV             │ 99    │ 99      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 3   │ Shirt          │ 98    │ 96      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 4   │ Hammer         │ 97    │ 87      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 5   │ Saw            │ 96    │ 96      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 6   │ Shoes          │ 95    │ 95      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 7   │ Laptop         │ 94    │ 84      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 8   │ Microwave      │ 93    │ 51      ║
 ╟─────┼────────────────┼───────┼─────────╢
 ║ 9   │ Food Processor │ 92    │ 74      ║
 ╟─────┼────────────────┼───────┼─────────╢
@@ -56,18 +49,6 @@ Removed 1 items of SKU# 2 inventory
 ╟─────┼────────────────┼───────┼─────────╢
 ║ 2   │ TV             │ 99    │ 98      ║
 ╟─────┼────────────────┼───────┼─────────╢
-║ 3   │ Shirt          │ 98    │ 96      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 4   │ Hammer         │ 97    │ 87      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 5   │ Saw            │ 96    │ 96      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 6   │ Shoes          │ 95    │ 95      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 7   │ Laptop         │ 94    │ 84      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 8   │ Microwave      │ 93    │ 51      ║
-╟─────┼────────────────┼───────┼─────────╢
 ║ 9   │ Food Processor │ 92    │ 74      ║
 ╟─────┼────────────────┼───────┼─────────╢
 ║ 10  │ Toilet Paper   │ 91    │ 24      ║
@@ -83,18 +64,6 @@ Insufficient quantity of SKU# 5 to meet order of 97
 ║ 1   │ Hamburger      │ 100   │ 74      ║
 ╟─────┼────────────────┼───────┼─────────╢
 ║ 2   │ TV             │ 99    │ 98      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 3   │ Shirt          │ 98    │ 96      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 4   │ Hammer         │ 97    │ 87      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 5   │ Saw            │ 96    │ 96      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 6   │ Shoes          │ 95    │ 95      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 7   │ Laptop         │ 94    │ 84      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 8   │ Microwave      │ 93    │ 51      ║
 ╟─────┼────────────────┼───────┼─────────╢
 ║ 9   │ Food Processor │ 92    │ 74      ║
 ╟─────┼────────────────┼───────┼─────────╢
@@ -113,24 +82,115 @@ Removed 90 items of SKU# 5 inventory
 ╟─────┼────────────────┼───────┼─────────╢
 ║ 2   │ TV             │ 99    │ 98      ║
 ╟─────┼────────────────┼───────┼─────────╢
-║ 3   │ Shirt          │ 98    │ 96      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 4   │ Hammer         │ 97    │ 87      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 5   │ Saw            │ 96    │ 6       ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 6   │ Shoes          │ 95    │ 95      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 7   │ Laptop         │ 94    │ 84      ║
-╟─────┼────────────────┼───────┼─────────╢
-║ 8   │ Microwave      │ 93    │ 51      ║
-╟─────┼────────────────┼───────┼─────────╢
 ║ 9   │ Food Processor │ 92    │ 74      ║
 ╟─────┼────────────────┼───────┼─────────╢
 ║ 10  │ Toilet Paper   │ 91    │ 24      ║
 ╚═════╧════════════════╧═══════╧═════════╝
 ````
 
+#### bamazonManager module User Documentation
+From the console terminal prompt:
+1. Enter `node bamazonManager`
+2. Will display contents of inventory.
+3. Select one of 5 option shown: `View Products for Sale, View Low Inventory, Update Stock Quantity, Add SKU, EXIT`
+4. Follow the prompts and provide input as requested.
+6. See clips below for examples.
 
+
+Enter `node bamazonManager`
+````
+? Which would you like to do choose? 
+> View Products for Sale 
+  View Low Inventory 
+  Update Stock Quantity 
+  Add SKU 
+  EXIT 
+````
+
+Follow the prompts
+````
+
+? Which would you like to do choose? View Products for Sale
+╔═════╤════════════════╤═══════╤═════════╗
+║ SKU │ Description    │ Price │ On Hand ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 1   │ Hamburger      │ 100   │ 74      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 2   │ TV             │ 99    │ 98      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 10  │ Toilet Paper   │ 91    │ 22      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 13  │ tester3        │ 234   │ 6       ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 14  │ tester4        │ 23    │ 4       ║
+╚═════╧════════════════╧═══════╧═════════╝
+
+? Which would you like to do choose? View Low Inventory
+╔═════╤═════════════╤═══════╤═════════╗
+║ SKU │ Description │ Price │ On Hand ║
+╟─────┼─────────────┼───────┼─────────╢
+║ 14  │ tester4     │ 23    │ 4       ║
+╚═════╧═════════════╧═══════╧═════════╝
+
+? Which would you like to do choose? Update Stock Quantity
+addInventory
+? Enter SKU/item_id to be modified:  14
+? Enter updated stock quantity:  6
+Updated stock_quantity for inventory item_id: 1
+╔═════╤════════════════╤═══════╤═════════╗
+║ SKU │ Description    │ Price │ On Hand ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 1   │ Hamburger      │ 100   │ 74      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 2   │ TV             │ 99    │ 98      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 10  │ Toilet Paper   │ 91    │ 22      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 13  │ tester3        │ 234   │ 6       ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 14  │ tester4        │ 23    │ 6       ║
+╚═════╧════════════════╧═══════╧═════════╝
+
+? Which would you like to do choose? View Low Inventory
+╔═════╤═════════════╤═══════╤═════════╗
+║ SKU │ Description │ Price │ On Hand ║
+╚═════╧═════════════╧═══════╧═════════╝
+
+? Which would you like to do choose? Add SKU
+addSKU
+? Enter product name of item:  tester5
+? Enter department name of item:  tester5
+? Enter price of item:  34
+? Enter starting stock quantity of item:  4
+Added to inventory item_id: 15
+╔═════╤════════════════╤═══════╤═════════╗
+║ SKU │ Description    │ Price │ On Hand ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 1   │ Hamburger      │ 100   │ 74      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 2   │ TV             │ 99    │ 98      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 10  │ Toilet Paper   │ 91    │ 22      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 13  │ tester3        │ 234   │ 6       ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 14  │ tester4        │ 23    │ 6       ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 15  │ tester5        │ 34    │ 4       ║
+╚═════╧════════════════╧═══════╧═════════╝
+
+? Which would you like to do choose? View Low Inventory
+╔═════╤═════════════╤═══════╤═════════╗
+║ SKU │ Description │ Price │ On Hand ║
+╟─────┼─────────────┼───────┼─────────╢
+║ 15  │ tester5     │ 34    │ 4       ║
+╚═════╧═════════════╧═══════╧═════════╝
+
+? Which would you like to do choose? EXIT
+
+sb@DESKTOP-P48C40B MINGW64 ~/OneDrive/Documents/BowlerConsulting/UTbootcamp/homework/bamazon (master)
+$ 
+
+````
 ### Program Documentation
 Main code references for `bamazon` can be accessed [here](https://stevenbowler.github.io/bamazon/docs/index.html).  Global scope variables can be accessed [here](https://stevenbowler.github.io/bamazon/docs/global.html), 

@@ -1,5 +1,10 @@
 //@ts-check
 
+/**
+ * @namespace bamazonCustomer
+ * @memberof bamazon
+ */
+
 var mysql = require('mysql');
 const { table } = require('table');
 var inquirer = require('inquirer');
@@ -86,12 +91,13 @@ const getUserInput = () => {
         ])
         .then(function (inquirerResponse) {
             var sql = `SELECT * FROM products WHERE item_id="${inquirerResponse.item_id}"`;
+
             // console.log(`sql: ${sql}`);
             con.query(sql, function (err, result) {
                 if (err) throw err;
                 // console.log(`result[0].product_name: ${result[0].product_name}`);
                 if (inquirerResponse.quantity <= result[0].stock_quantity) {
-                    console.log(`order placed for ${inquirerResponse.quantity} ${result[0].product_name}${inquirerResponse.quantity > 1 ? "s" : ""}`);
+                    console.log(`order placed for ${inquirerResponse.quantity} ${result[0].product_name}${inquirerResponse.quantity > 1 ? "s" : ""} at a total cost of $${inquirerResponse.quantity * result[0].price}`);
                     var sql = `UPDATE products SET stock_quantity = ${result[0].stock_quantity - inquirerResponse.quantity} WHERE item_id=${inquirerResponse.item_id};`
                     con.query(sql, function (err, result) {
                         if (err) throw err;
