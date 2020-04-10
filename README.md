@@ -39,7 +39,7 @@ Enter `node bamazonCustomer` get prompted for input
 
 ? What SKU do you want to purchase?  2     
 ? How many items do you want to purchase?  1
-order placed for 1 TV
+order placed for 1 TV at a total cost of $99
 <ctrl>C to break out of input mode
 Removed 1 items of SKU# 2 inventory
 ╔═════╤════════════════╤═══════╤═════════╗
