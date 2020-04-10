@@ -91,8 +91,8 @@ const lowInventory = () => {
         }
         var output = table(data);
         console.log(output);
-        getManagerInput();
-        // firstDisplay();
+        // getManagerInput();
+        firstDisplay();
     });
 }
 
