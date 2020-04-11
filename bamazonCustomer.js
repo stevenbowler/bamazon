@@ -95,10 +95,12 @@ const getUserInput = () => {
             // console.log(`sql: ${sql}`);
             con.query(sql, function (err, result) {
                 if (err) throw err;
-                // console.log(`result[0].product_name: ${result[0].product_name}`);
+                // if quantity requested is less than onHand stock_quantity
                 if (inquirerResponse.quantity <= result[0].stock_quantity) {
+                    var sales = result[0].product_sales;
+                    var newSales = sales + (inquirerResponse.quantity * result[0].price);
                     console.log(`order placed for ${inquirerResponse.quantity} ${result[0].product_name}${inquirerResponse.quantity > 1 ? "s" : ""} at a total cost of $${inquirerResponse.quantity * result[0].price}`);
-                    var sql = `UPDATE products SET stock_quantity = ${result[0].stock_quantity - inquirerResponse.quantity} WHERE item_id=${inquirerResponse.item_id};`
+                    var sql = `UPDATE products SET stock_quantity = ${result[0].stock_quantity - inquirerResponse.quantity}, product_sales = ${newSales} WHERE item_id=${inquirerResponse.item_id};`
                     con.query(sql, function (err, result) {
                         if (err) throw err;
                         // console.log(`SKU# updated: ${result.affectedRows ? inquirerResponse.item_id : "none"}`);

@@ -91,8 +91,8 @@ const lowInventory = () => {
         }
         var output = table(data);
         console.log(output);
-        // getManagerInput();
-        firstDisplay();
+        getManagerInput();
+        // firstDisplay();
     });
 }
 
@@ -100,7 +100,7 @@ const lowInventory = () => {
 
 /**
  * Update stock_quantity for and item_id/SKU in products table of bamazon database, based on input from Manager
- * @function addInventory
+ * @function updateStockQuantity
  */
 const updateStockQuantity = () => {
     console.log(`addInventory`);
@@ -126,7 +126,8 @@ const updateStockQuantity = () => {
 
             });
 
-            firstDisplay();
+            // firstDisplay();
+            getManagerInput();
         })
         .catch(function (err) {
             console.log(`err: ${err}`);
@@ -137,6 +138,7 @@ const updateStockQuantity = () => {
 
 /**
  * Add a new item_id/SKU to products table of bamazaon database
+ * @function addSKU
  */
 const addSKU = () => {
     console.log(`addSKU`);
@@ -167,16 +169,13 @@ const addSKU = () => {
         .then(function (inquirerResponse) {
             var sql = `INSERT INTO products (product_name, department_name, price, stock_quantity) 
                             VALUES ("${inquirerResponse.product_name}", "${inquirerResponse.department_name}",${inquirerResponse.price},${inquirerResponse.stock_quantity});`
-
             con.query(sql, function (err, result) {
                 if (err) throw err;
                 console.log(`Added to inventory item_id: ${result.insertId}`);
-
             });
-            firstDisplay();
+            // firstDisplay();
+            getManagerInput();
         })
-
-
         .catch(function (err) {
             console.log(`err:  ${err}`);
         });
@@ -185,8 +184,8 @@ const addSKU = () => {
 
 
 /** 
- * Called from main loop, calls itself recursively to retry different inputs
- * @function getCharInput
+ * Called from {@link firstDisplay}, calls itself recursively to retry different inputs
+ * @function getManagerInput
  */
 const getManagerInput = () => {
     inquirer
