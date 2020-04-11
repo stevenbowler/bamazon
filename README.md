@@ -11,7 +11,7 @@ First, to interact with the bamazon database as a customer, watch this video: _*
 
 Next, to interact with the bamazon database as a manager, watch this video: _*[bamazonManager](https://drive.google.com/file/d/1REl8AMISx-nLwIWfQWmK-4_ixC6zLrh4/view)*_ or read the section below titled `bamazonManager module User Documentation`.
 
-Finally, to interact with the bamazaon database as a supervisor, watch this video: _*[bamazonSupervisor](https://drive.google.com/file/d/14n_v6nVk4phDeK0Vzy6z3lEmtbhKBdk6/view)*_ or read the section below titled `bamazonSupervisor module User Documentation`.
+Finally, to interact with the bamazaon database as a supervisor, watch this video: _*[bamazonSupervisor](https://drive.google.com/file/d/1EjiZzdNnaVC5bYFpNKrEU1NKVVDiKiBD/view)*_ or read the section below titled `bamazonSupervisor module User Documentation`.
 
 
 #### bamazonCustomer module User Documentation
@@ -192,5 +192,81 @@ sb@DESKTOP-P48C40B MINGW64 ~/OneDrive/Documents/BowlerConsulting/UTbootcamp/home
 $ 
 
 ````
+
+#### bamazonSupervisor module User Documentation
+From the console terminal prompt:
+1. Enter `node bamazonSupervisor`
+2. Will display contents of inventory.
+3. Select one of 4 option shown: `View Products for Sale, View Product Sales By Department, Add Department, EXIT`
+4. Follow the prompts and provide input as requested.
+6. See clips below for examples.
+
+
+Enter `node bamazonSupervisor`
+````
+? Which would you like to do choose? (Use arrow keys)
+> View Products for Sale
+  View Product Sales by Department
+  Add Department
+  EXIT
+````
+
+Follow the prompts
+
+````
+$ node bamazonSupervisor
+Connected!
+
+? Which would you like to do choose? View Products for Sale
+╔═════╤════════════════╤═══════╤═════════╗
+║ SKU │ Description    │ Price │ On Hand ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 1   │ Hamburger      │ 100   │ 77      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 2   │ TV             │ 99    │ 99      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 9   │ Food Processor │ 92    │ 97      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 10  │ Toilet Paper   │ 91    │ 90      ║
+╟─────┼────────────────┼───────┼─────────╢
+║ 11  │ tester         │ 45    │ 300     ║
+╚═════╧════════════════╧═══════╧═════════╝
+
+? Which would you like to do choose? View Product Sales by Department
+╔═══════════════╤═════════════════╤═══════╤══════════╤════════╗
+║ Department ID │ Department Name │ Sales │ Overhead │ Profit ║
+╟───────────────┼─────────────────┼───────┼──────────┼────────╢
+║ 1             │ Bathroom        │ 10000 │ 1000     │ 9000   ║
+╟───────────────┼─────────────────┼───────┼──────────┼────────╢
+║ 2             │ Electronics     │ 20000 │ 2000     │ 18000  ║
+╟───────────────┼─────────────────┼───────┼──────────┼────────╢
+║ 9             │ tester2         │ 0     │ 3434     │ -3434  ║
+╚═══════════════╧═════════════════╧═══════╧══════════╧════════╝
+
+? Which would you like to do choose? Add Department
+addSKU
+? Enter name of Department:  tester3
+? Enter department overhead:  2323
+Added to department database, department_id: 10
+? Which would you like to do choose? View Product Sales by Department
+╔═══════════════╤═════════════════╤═══════╤══════════╤════════╗
+║ Department ID │ Department Name │ Sales │ Overhead │ Profit ║
+╟───────────────┼─────────────────┼───────┼──────────┼────────╢
+║ 1             │ Bathroom        │ 10000 │ 1000     │ 9000   ║
+╟───────────────┼─────────────────┼───────┼──────────┼────────╢
+║ 2             │ Electronics     │ 20000 │ 2000     │ 18000  ║
+╟───────────────┼─────────────────┼───────┼──────────┼────────╢
+║ 9             │ tester2         │ 0     │ 3434     │ -3434  ║
+╟───────────────┼─────────────────┼───────┼──────────┼────────╢
+║ 10            │ tester3         │ 0     │ 2323     │ -2323  ║
+╚═══════════════╧═════════════════╧═══════╧══════════╧════════╝
+
+? Which would you like to do choose? EXIT
+
+sb@DESKTOP-P48C40B MINGW64 ~/OneDrive/Documents/BowlerConsulting/UTbootcamp/homework/bamazon (master)
+$ 
+````
+
+
 ### Program Documentation
 Main code references for `bamazon` can be accessed [here](https://stevenbowler.github.io/bamazon/docs/index.html).  Global scope variables can be accessed [here](https://stevenbowler.github.io/bamazon/docs/global.html), 
